@@ -15,8 +15,15 @@ body{
 nav{
     background-color: transparent;
 }
+#logo{
+    width: 250px;
+    margin-top: 120px;
+}
 .logo{
-    width: 200px;
+    visibility: hidden;
+}
+.slogan{
+    height: 450px;
 }
 .background-principal{
     background-color: #0d1925;
@@ -51,6 +58,63 @@ nav{
     color: white;
     font-size: 50px;
 }
+.parallax-container {
+    height: 900px;
+}
+/*------Scrol down----*/
+.center1{
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.down{
+    position: relative;
+    width: 25px;
+    height: 50px;
+    border-radius: 25px;
+    background: transparent;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+.down::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%,0);
+    animation: animate 2s linear infinite;
+}
+.down::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    left: 50%;
+    top: 5px;
+    transform: translate(-50%,0);
+    border-radius: 3px;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,0px);
+        opacity: 0;
+    }
+    80%{
+        transform: translate(-50%,60px);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%,90px);
+        opacity: 0;
+    }
+}
 
 @media only screen and (max-width: 600px) {
     #background-header{
@@ -59,10 +123,16 @@ nav{
     #typed{
         font-size: 30px;
     }
-    .logo{
+    #logo{
         width: 150px;
     }
     .es{
         font-size: 27px;
+    }
+    .slogan{
+        height: 335px;
+    }
+    .center1{
+        top: 90%;
     }
 }
