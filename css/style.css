@@ -11,6 +11,12 @@ body{
 .spacing10{
     height: 9px;
 }
+.spacing50{
+    height: 50px;
+}
+.spacing100{
+    height: 100px;
+}
 .img-center{
     display: block;
     margin: auto;
@@ -42,6 +48,10 @@ nav{
 }
 .color-claro{
     color: #e7e8ea;
+}
+.line-vertical{
+    border-left: 6px solid #268db0;
+    height: 120px;
 }
 #particles-js{
     top: -65px;
@@ -135,5 +145,14 @@ nav{
     }
     .center1{
         top: 93%;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #particles-js{
+        height: 950px;
+    }
+    #logo{
+        margin-top: 200px;
+        width: 350px;
     }
 }
